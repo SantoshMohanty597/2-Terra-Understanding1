@@ -1,0 +1,21 @@
+output "PrintPAT" {
+    value = "This is PAT : - ${var.github_token}"
+}
+
+### Output for Repository URL and Clone URL are came from tfstate after applying the code.
+### No Var is required for these outputs.
+
+output "url" {
+    value = "This is URL : - ${github_repository.Terraform-git-repo.html_url}"
+  
+}
+
+output "clone_url" {
+    value = "This is URL : - ${github_repository.Terraform-git-repo.ssh_clone_url}"
+
+}
+
+# output "full_name2" {
+#     value = "This is Full name : - ${github_repository.Terraform-git-repo.full_name}"
+
+# }
